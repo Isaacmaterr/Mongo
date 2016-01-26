@@ -1,0 +1,21 @@
+{
+    "name": "isaac/mongo",
+    "require": {
+          "phpunit/phpunit": "3.7.*",
+          "phpmailer/phpmailer": "*",
+          "smottt/wideimage": "*"
+    },
+    "autoload": {
+    "psr-0": {
+        "" : "App/",
+         
+        
+    }
+    },
+    "authors": [
+        {
+            "name": "isaac",
+            "email": "isaac@a2designer.com"
+        }
+    ]
+}

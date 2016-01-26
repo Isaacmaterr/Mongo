@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/01/2016, 21:41:35
+    Author     : isaac
+*/
+
+.circulo{
+    
+    background:#FFF0E0;
+ 
+    -moz-border-radius:64%;
+    -webkit-border-radius:64%;
+
+    padding:32px;
+    text-align:center;
+    color:white;
+    
+    
+    
+}
