@@ -14,7 +14,7 @@ class Conexao {
     public function __construct() {
        try{
            if($this->conexao == null){
-           $mongo= new MongoClient();
+           $mongo= new MongoClient("mongodb://isaac:isaac1234@localhost", array("db" => "biblioteca"));
            $this->conexao = $mongo->selectDB('biblioteca');
            }
        }catch(\MongoConnectionException $e){

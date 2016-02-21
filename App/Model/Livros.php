@@ -14,19 +14,30 @@ namespace Model;
  * @author isaac
  */
 class Livros {
+
     //put your code here
-    private $nome ;
-    private $id  ;
+
+    private $usuario;
+    private $nome;
+    private $id;
     private $preco;
     private $outor;
     private $status;
     private $tags;
     private $serie;
     private $editora;
-    private $quantidade ;
+    private $quantidade;
     private $imagem;
-    
-            function getImagem() {
+
+    function getUsuario() {
+        return $this->usuario;
+    }
+
+    function setUsuario($usuario) {
+        $this->usuario = $usuario;
+    }
+
+    function getImagem() {
         return $this->imagem;
     }
 
@@ -34,14 +45,14 @@ class Livros {
         $this->imagem = $imagem;
     }
 
-        
     function getQuantidade() {
         return $this->quantidade;
     }
 
     function setQuantidade($quantidade) {
         $this->quantidade = $quantidade;
-    }         
+    }
+
     function getId() {
         return $this->id;
     }
@@ -50,7 +61,7 @@ class Livros {
         $this->id = $id;
     }
 
-        function getNome() {
+    function getNome() {
         return $this->nome;
     }
 
@@ -106,14 +117,13 @@ class Livros {
         $this->editora = $editora;
     }
 
-        
-    
-     public function modelo() {
+    public function modelo() {
         $insert = [
             '_id' => $this->getId(),
             'nome' => $this->getNome(),
+            'usuario' => $this->getUsuario(),
             'preco' => intval($this->getPreco()),
-            'qtd' =>intval( $this->getQuantidade()),
+            'qtd' => intval($this->getQuantidade()),
             'autor' => $this->getOutor(),
             'status' => $this->getStatus(),
             'tags' => $this->getTags(),
@@ -123,4 +133,5 @@ class Livros {
         ];
         return $insert;
     }
+
 }

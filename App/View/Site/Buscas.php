@@ -9,35 +9,48 @@ $tags = (new HelperLivros)->chuvaTags();
 <link href="../webroot/css/jquery.tagit.css" rel="stylesheet" type="text/css">
 <link href="../webroot/css/tagit.ui-zendesk.css" rel="stylesheet" type="text/css">
 <div class="container-fluid">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../Usuarios/index.php">
+                    Minha Conta
+                </a>
 
+            </div>
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../Usuarios/Cadastro.php">
+                    Cadastrar
+                </a>
+
+            </div>
+        </div>
+    </nav>
     <div class="row" style="margin-top: 145px;">
         <div class="col-md-5 col-lg-offset-3">
             <div class="row">
                 <label for="basic-url">Tags</label>
                 <form method="post" action="listaLivros.php" >
                     <input type="text" class="form-control" id="singleFieldTags2" name="tags" >
-                 <button type="submit" class="btn btn-success" style="width: 100%;" name="buscar" >Buscar</button>
+                    <button type="submit" class="btn btn-success" style="width: 100%;" name="buscar" >Buscar</button>
                 </form>
 
 
 
             </div>
-            <div class="row" style=" 
-                 background:#FFF0E0;
+            <div class="row" >
 
-                 -moz-border-radius:64%;
-                 -webkit-border-radius:64%;
-
-                 padding:32px;
-                 text-align:center;
-                 color:white;" >
-                <div class="row">
-
-<?= $tags ?>
+                <div class="col-md-12">
+                    <div class="btn-group">
+                        <div class="col-md-6">
+                            <?= $tags ?>
+                        </div>
+                    </div>
 
                 </div>
-
             </div>
+
+
 
         </div>
     </div>

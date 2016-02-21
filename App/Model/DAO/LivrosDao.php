@@ -16,7 +16,7 @@ namespace Model\DAO;
 
 use MongoCode;
 use Controller\Collection;
-
+use App\Model\Livro_Usuario;
 class LivrosDao extends OdmAbstract {
 
     public $conexao;
@@ -74,5 +74,48 @@ class LivrosDao extends OdmAbstract {
 
         return $tags;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       public function meusIntereces(\MongoCursor $Array,\MongoCursor $livrosJaAssoc) {
+            if(!isset($_SESSION['Usuario']['meusIntereces'])){
+          
+                return [];
+            }
+            $query=[];
+            foreach ($Array as $value) {
+                $query['usuario']['$in'][] = $value['_id']->{'$id'};
+            }
+            
+            foreach ($livrosJaAssoc as $value) {
+                $query['_id']['$nin'][] = $value['idlivro'];
+            }
+                foreach ($_SESSION['Usuario']['meusIntereces'] as $value) {
+                    var_dump($value);
+               $query['tags']['$in'][] = new \MongoRegex("/$value/i") ;
+            }
+             
+            
+            
+            $result = $this->conexao->find($query);
+            
+            return iterator_to_array($result);
+        
+            
+        }
+            
+    
+    
+    
+    
+    
+    
+    
 
 }

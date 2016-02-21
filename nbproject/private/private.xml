@@ -3,14 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/mongo/App/View/Site/listaLivros.php</file>
-            <file>file:/C:/xampp/htdocs/mongo/App/View/Livros/indexAction.php</file>
-            <file>file:/C:/xampp/htdocs/mongo/App/View/Livros/update.php</file>
-            <file>file:/C:/xampp/htdocs/mongo/App/Model/DAO/Util.php</file>
+            <file>file:/C:/xampp/htdocs/mongo/App/Model/DAO/UsuariosDao.php</file>
+            <file>file:/C:/xampp/htdocs/mongo/App/Model/DAO/LivrosDao.php</file>
             <file>file:/C:/xampp/htdocs/mongo/App/Model/Livros.php</file>
-            <file>file:/C:/xampp/htdocs/mongo/App/View/Livros/index.php</file>
-            <file>file:/C:/xampp/htdocs/mongo/App/View/Livros/updateAction.php</file>
+            <file>file:/C:/xampp/htdocs/mongo/App/View/Usuarios/painel.php</file>
+            <file>file:/C:/xampp/htdocs/mongo/App/Model/Usuarios.php</file>
             <file>file:/C:/xampp/htdocs/mongo/App/View/Helper/HelperLivros.php</file>
+            <file>file:/C:/xampp/htdocs/mongo/App/Model/DAO/LivroUsuarioDao.php</file>
+            <file>file:/C:/xampp/htdocs/mongo/App/Model/LivroUsuario.php</file>
         </group>
     </open-files>
 </project-private>

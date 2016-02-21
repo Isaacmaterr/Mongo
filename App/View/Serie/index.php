@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once '../../../vendor/autoload.php';
 require_once '../../../index.php';
 use View\Helper\HelperSeries;
@@ -13,7 +12,6 @@ $editora = new HelperEditoras();
 $selectEditora = $editora->select();
 $livro = new HelperLivros();
 $tabelaLivro = $livro->tabela();
-
 ?>
 
 <HTML>
@@ -30,14 +28,13 @@ $tabelaLivro = $livro->tabela();
     </head>
     <body>
         <div class="row">
-            
+            <?=(new HelperAdmin)->gerarmenu();?>
         </div>
         <div class="row" style="margin-top: 58px;">
 
             <div id="main" class="container-fluid">
-                <button class="btn btn-danger"  onClick="history.go(-1)">Voltar</button>
-                <h3 class="page-header">Adicionar Livros</h3>
-                
+
+                <h3 class="page-header">Adicionar Series</h3>
 
                 <form action="indexAction.php" method="post" enctype="multipart/form-data">
 
@@ -47,23 +44,19 @@ $tabelaLivro = $livro->tabela();
                             <div class=" col-md-5 center-block">
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Titulo</label>
-                                    <input type="text" class="form-control"  name="titulo" placeholder="Titulo">
+                                    <label for="exampleInputEmail1">Nome</label>
+                                    <input type="text" class="form-control"  name="nome" placeholder="Titulo">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Preço</label>
-                                    <input type="text" class="form-control" name="preco" placeholder="Preço">
+                                    <label for="exampleInputEmail1">Data</label>
+                                    <input type="text" class="form-control" name="data" placeholder="data">
                                 </div>
+                                
                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">Quantidade</label>
-                                    <input type="text" class="form-control" name="quantidade" placeholder="Preço">
-                                </div>
-                                <div class="form-group">
                                     <label for="exampleInputEmail1">Autor</label>
                                     <input type="text" class="form-control" name="autor" placeholder="Autor">
                                 </div>
-                                <?= $selectSerie ?>
-                                <?= $selectEditora ?>
+                                
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Tags</label>
 
@@ -72,39 +65,13 @@ $tabelaLivro = $livro->tabela();
 
                                 </div>
                                 
-                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">Imagem</label>
-
-                                    <input type="file" name="file">
-
-
-                                </div>
+                              
 
                                 <button type="submit" class="btn btn-default" name="cadastrar">Submit</button>
                             </div>
                             
                         </div>
-                  <!--      <div class="row">
-                            <div class="col-md-12">
-                                <table border="1" class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Nome</th>
-                                            <th>Autor</th>
-                                            <th>Status</th>
-                                            <th>Editora</th>
-                                            <th>Serie</th>
-                                            <th>Preço</th>
-                                            <th>Quantidade</th>
-                                            <th>Ação</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                       <?= $tabelaLivro ?>
-                                    </tbody>
-                                </table> 
-                            </div>
-                        </div>-->
+                     
                 </form>
 
             </div>
